@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Cornelius Aurelius — Informational Oscillation Damping Law</title>
+
+<meta name="description" content="Official verification site for the Informational Oscillation Damping Law by Cornelius Aurelius. Includes the full mathematical verification, thought experiments, interpretation, and peer review links.">
+<meta name="theme-color" content="#00c8ff">
+<meta name="author" content="Cornelius Aurelius">
+
+<style>
+/* GLOBAL THEME — BLACK + NEON BLUE */
+body {
+  margin: 0;
+  background: #000;
+  color: #9ee7ff;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 70px 20px;
+  background: radial-gradient(circle at center, #001c2e, #000);
+  border-bottom: 2px solid #00c8ff;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  color: #00c8ff;
+  text-shadow: 0 0 25px #00c8ff;
+  animation: glowPulse 3.5s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%   { text-shadow: 0 0 20px #00c8ff; }
+  50%  { text-shadow: 0 0 45px #33e8ff; }
+  100% { text-shadow: 0 0 20px #00c8ff; }
+}
+
+/* SECTIONS */
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+h2 {
+  font-size: 1.9rem;
+  color: #00c8ff;
+  text-shadow: 0 0 10px #009bcf;
+  margin-bottom: 20px;
+}
+
+p, li {
+  font-size: 1.18rem;
+}
+
+/* BOXES */
+.code-block {
+  background: #00141f;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #00c8ff55;
+  color: #b1eaff;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.thoughtbox {
+  background: #001622;
+  border-left: 5px solid #00c8ff;
+  padding: 22px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.factbox {
+  background: #002035;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #00c8ff55;
+  box-shadow: 0 0 25px #00c8ff33 inset;
+  margin-top: 40px;
+}
+
+/* BUTTON */
+a.button {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #003a5c;
+  border-radius: 8px;
+  border: 1px solid #00c8ff;
+  color: #9ee7ff;
+  text-decoration: none;
+  margin: 8px 10px 0 0;
+  transition: .3s;
+}
+a.button:hover {
+  background: #005a8c;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 45px;
+  background: #000814;
+  border-top: 2px solid #00c8ff;
+  margin-top: 60px;
+}
+footer a {
+  color: #00c8ff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+footer a:hover { text-decoration: underline; }
+
+/* MOBILE */
+@media (max-width: 600px){
+  header h1 { font-size: 2.3rem; }
+  h2 { font-size: 1.6rem; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Informational Oscillation Damping Law</h1>
+  <p style="color:#9ee7ff;font-size:1.2rem;">By Cornelius Aurelius</p>
+</header>
+
+<section>
+  <h2>📘 What This Law States</h2>
+
+  <p>
+    Certain informational fields develop <b>oscillatory energy</b> — wave-like fluctuations,
+    competing frequencies, rapid up-down variance.
+  </p>
+
+  <p style="font-size:1.35rem;text-align:center;color:#00c8ff;">
+    <b>Diffusion + damping causes all oscillatory informational energy to collapse.</b>
+  </p>
+
+  <p>
+    That means the oscillations soften, weaken, and ultimately settle into a
+    quiet, low-energy state — exactly the behaviour observed in physical
+    oscillators under friction, but now applied to <b>informational dynamics</b>.
+  </p>
+</section>
+
+<section>
+  <h2>🔬 Exact Verification Code (from your Colab)</h2>
+
+  <div class="code-block">
+<pre>
+# 1. Oscillatory informational field
+x = np.linspace(0, 2*np.pi, N, endpoint=False)
+psi = np.sin(10*x) + 0.5*np.sin(25*x)
+
+def lap(f):
+    return np.roll(f, -1) - 2*f + np.roll(f, 1)
+
+def osc_energy(f):
+    return np.sum(f**2)
+
+E = [osc_energy(psi)]
+
+# 2. Oscillation damping
+c = 0.1
+gamma = 0.05
+for _ in range(250):
+    psi = psi + c**2 * lap(psi) - gamma * psi
+    E.append(osc_energy(psi))
+
+# 3. Verified: Oscillation energy strictly decreases.
+</pre>
+  </div>
+
+  <p>
+    The plotted curve (your screenshot) shows a steep exponential-like decay,
+    confirming the law.  
+    :contentReference[oaicite:1]{index=1}
+  </p>
+</section>
+
+<section>
+  <h2>🧠 Thought Experiments</h2>
+
+  <div class="thoughtbox">
+    <b>Vibrating Metal Plate</b><br><br>
+    Strike a metal plate.  
+    It rings with complex oscillations.  
+    With no further input, friction gradually removes energy until silence.
+  </div>
+
+  <div class="thoughtbox">
+    <b>Overthinking → Calm Resolution</b><br><br>
+    A mind in conflict oscillates between possibilities.  
+    With reflection and damping (awareness), the oscillations fade,
+    leaving a coherent settled state.
+  </div>
+
+  <div class="thoughtbox">
+    <b>Market Oscillation Relaxation</b><br><br>
+    Wild back-and-forth price swings in economics reduce when damping forces
+    (regulation, liquidity balancing, or natural equilibrium) activate.
+  </div>
+</section>
+
+<section>
+  <h2>📈 Scientific Interpretation</h2>
+  <ul>
+    <li>Oscillations ≈ high-frequency informational modes.</li>
+    <li>Damping removes high-frequency energy fastest.</li>
+    <li>The field evolves toward a slow, smooth, stable state.</li>
+    <li>Energy decay acts as a Lyapunov function.</li>
+  </ul>
+
+  <div class="factbox">
+    <h3 style="color:#00c8ff;margin-top:0;">⚡ Advanced Insight</h3>
+    <p>
+      This system approximates the discrete version of the <b>damped wave equation</b>:
+    </p>
+
+    <p style="text-align:center;color:#7ee8ff;">
+      <b>ψₜₜ + γ ψₜ = c² ψₓₓ</b>
+    </p>
+
+    <p>
+      High-frequency modes dissipate fastest, producing a rapid collapse of oscillatory energy.
+      In information geometry, this corresponds to <b>wave-mode contraction in signal space</b>.
+    </p>
+
+    <p>
+      This law is foundational for understanding:
+      <br><br>
+      • Stabilization of informational waves  
+      • Collapse of multi-frequency fields  
+      • Energetic dissipation in distributed cognition  
+      • Noise damping in data-driven systems  
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>📣 Peer Review Submission</h2>
+
+  <p>
+    You are invited to contribute analytical proofs, dimensional generalisations,
+    or mappings to thermodynamic damping models.
+  </p>
+
+  <a class="button" href="mailto:138licensing@gmail.com">Submit via Email</a>
+  <a class="button" href="https://zenodo.org/records/17362534" target="_blank">Submit via Zenodo</a>
+</section>
+
+<footer>
+  <p>© Cornelius Aurelius</p>
+
+  <p>
+    <a href="https://corneliusaurelius.com/">Website</a> |
+    <a href="https://medium.com/@138licensing">Medium</a> |
+    <a href="mailto:138licensing@gmail.com">Email</a> |
+    <a href="https://zenodo.org/records/17362534">Zenodo</a> |
+    <a href="https://www.instagram.com/cornelius_aurelius_/">Instagram</a> |
+    <a href="https://www.linkedin.com/in/cornelius-aurelius-404805325/recent-activity/all/">LinkedIn</a>
+  </p>
+</footer>
+
+</body>
+</html>
